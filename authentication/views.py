@@ -11,7 +11,6 @@ def login(request):
     if user is not None:
         if user.is_active:
             auth_login(request, user)
-            # Status login sukses.
             return JsonResponse({
                 "username": user.username,
                 "status": True,
